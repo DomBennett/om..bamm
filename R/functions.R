@@ -10,8 +10,8 @@
 bamm <- function(...) {
   arglist <- outsider::.arglist_get(...)
   files_to_send <- outsider::.filestosend_get(arglist = arglist)
-  launcher <- outsider::launcher_class(repo = 'dombennett/om..bamm',
-                                       cmd = 'bamm', arglist = arglist,
-                                       files_to_send = files_to_send)
-  outsider::run(launcher)
+  otsdr <- outsider::.outsider_init(repo = 'dombennett/om..bamm', cmd = 'bamm',
+                                    arglist = arglist,
+                                    files_to_send = files_to_send)
+  outsider::.run(otsdr)
 }
