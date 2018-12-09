@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 
 RUN apt-get update && apt-get install -y \
-    wget build-essential cmake
+    wget build-essential cmake git
 
 RUN wget https://github.com/macroevolution/bamm/archive/v2.5.0.tar.gz && \
     tar zxvf v2.5.0.tar.gz && \

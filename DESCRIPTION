@@ -1,14 +1,16 @@
-Package: om..bamm..2.5.0..dombennett
+Package: om..bamm..dombennett
 Type: Package
-Title: BAMM 2.5.0
+Title: Outsider module for BAMM
 Version: 0.1.0
 Author: Dom Bennett
 Maintainer: Dom Bennett <dominic.john.bennett@gmail.com>
-Description: Install and run BAMM 2.5.0 in R.
+GitHub: dombennett
+Docker: dombennett
+Description: Install and run BAMM in R.
 License: MIT + file LICENSE
 Encoding: UTF-8
-BugReports: https://github.com/dombennett/om..raxml..8.2.12/issues
-RoxygenNote: 6.1.0
+BugReports: https://github.com/dombennett/om..bamm/issues
+RoxygenNote: 6.1.1
 Depends:
     R (>= 3.3.0)
 Imports:

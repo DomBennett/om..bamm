@@ -1,7 +1,7 @@
-FROM ubuntu:18.04
+FROM ubuntu:latest
 
 RUN apt-get update && apt-get install -y \
-    wget build-essential cmake
+    wget build-essential cmake git
 
 RUN git clone https://github.com/macroevolution/bamm.git --depth 10
 
