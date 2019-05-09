@@ -1,4 +1,4 @@
-Package: om..bamm..dombennett
+Package: om..bamm
 Type: Package
 Title: Outsider module for BAMM
 Version: 0.1.0
@@ -14,4 +14,7 @@ RoxygenNote: 6.1.1
 Depends:
     R (>= 3.3.0)
 Imports:
+    outsider.base
+Suggests:
     outsider
+

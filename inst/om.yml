@@ -1,2 +1,5 @@
 program: BAMM
 details: Bayesian Analysis of Macroevolutionary Mixtures
+docker: dombennett
+github: dombennett
+url: https://github.com/DomBennett/om..bamm
