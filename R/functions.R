@@ -8,10 +8,9 @@
 #' @example examples/bamm.R
 #' @export
 bamm <- function(...) {
-  arglist <- outsider::.arglist_get(...)
-  files_to_send <- outsider::.filestosend_get(arglist = arglist)
-  otsdr <- outsider::.outsider_init(repo = 'dombennett/om..bamm', cmd = 'bamm',
-                                    arglist = arglist,
-                                    files_to_send = files_to_send)
-  outsider::.run(otsdr)
+  arglist <- arglist_get(...)
+  files_to_send <- filestosend_get(arglist = arglist)
+  otsdr <- outsider_init(pkgnm = 'om..bamm', cmd = 'bamm',
+                         arglist = arglist, files_to_send = files_to_send)
+  run(otsdr)
 }
