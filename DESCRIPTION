@@ -4,8 +4,6 @@ Title: Outsider module for BAMM
 Version: 0.1.0
 Author: Dom Bennett
 Maintainer: Dom Bennett <dominic.john.bennett@gmail.com>
-GitHub: dombennett
-Docker: dombennett
 Description: Install and run BAMM in R.
 License: MIT + file LICENSE
 Encoding: UTF-8
