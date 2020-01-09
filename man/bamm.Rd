@@ -2,22 +2,54 @@
 % Please edit documentation in R/functions.R
 \name{bamm}
 \alias{bamm}
-\title{bamm}
+\title{bamm: Bayesian Analysis of Macroevolutionary Mixtures}
 \usage{
-bamm(...)
+bamm(control_file, indir, outdir = indir)
 }
 \arguments{
-\item{...}{Arguments}
+\item{control_file}{File path to control file}
+
+\item{indir}{File path to directory containting all input files specified in
+the control file.}
+
+\item{outdir}{File path to directory where all resulting files will be
+placed.}
 }
 \description{
-Run bamm.
+Run bamm through R.
 }
 \details{
-Usage: \code{bamm -c <control-file> [--<parameter-name>
-<parameter-value> ...]}
+\code{control_file} is equivalent to the \code{-c} option in the
+command line version of the program. By default, the command-line version
+looks in the folder where it was launched to find files specified in the
+control file (e.g. tree file). In this version, the \code{indir} determines
+where input files are contained.
+
+For efficiency, it is based to specify an \code{indir} folder that contains
+\emph{only} the files required to run the BAMM analysis.
 }
 \examples{
 library(outsider)
 bamm <- module_import('bamm', repo = 'dombennett/om..bamm')
-bamm('--version')
+
+# create temp directory to contain test input and output data
+wd <- file.path(tempdir(), 'testing_bamm')
+if(!dir.exists(wd)) {
+  dir.create(wd)
+}
+# download modified template control file for a "speciation-extinction"
+# analysis of whales
+url <- 'https://raw.githubusercontent.com/DomBennett/om..bamm/master/test_data/whale_diversification.txt'
+control_file <- file.path(wd, 'whale_diversification.txt')
+download.file(url = url, destfile = control_file)
+# download a tree whales
+url <- 'https://raw.githubusercontent.com/DomBennett/om..bamm/master/test_data/whaletree.tre'
+download.file(url = url, destfile = file.path(wd, 'whaletree.tre'))
+
+# run bamm in R by specifying the control file and the directory containing the
+# whale tree
+bamm(control_file = control_file, indir = wd, outdir = wd)
+
+# clean up
+unlink(x = wd, recursive = TRUE, force = TRUE)
 }
