@@ -49,7 +49,7 @@ module_install(repo = "DomBennett/om..bamm")
 ["Quickstart"](http://bamm-project.org/quickstart.html) guide to BAMM
 
 <!-- Note: set eval=TRUE to run example and show output -->
-```{r detailed-example, eval=FALSE, include=TRUE}
+```{r detailed-example, eval=TRUE, include=TRUE}
 # ------
 # Import
 # ------
@@ -86,7 +86,7 @@ bamm(control_file = control_file, indir = wd, outdir = wd)
 # Double check the output, all resulting files are stored in outdir
 list.files(wd)
 # peek into the mcmc_out.txt
-cat(readLines(file.path(wd, 'mcmc_out.txt')))
+print(read.csv(file.path(wd, 'mcmc_out.txt')))
 ```
 
 <!-- Remove module after running above example -->
@@ -112,7 +112,7 @@ files.)
 ## Links
 
 Find out more by visiting the
-[BAMM documentation website](http://bamm-project.org/documentation.html)
+[BAMM documentation website](http://bamm-project.org/documentation.html).
 
 ## Please cite
 
@@ -139,4 +139,5 @@ inside of R. *Journal of Open Source Software*, In review
 
 **An `outsider` module**
 
-Learn more at [outsider website](https://antonellilab.github.io/outsider/). Want to build your own module? Check out [`outsider.devtools` website](https://antonellilab.github.io/outsider.devtools/).
+Learn more at [outsider website](https://antonellilab.github.io/outsider/).
+Want to build your own module? Check out [`outsider.devtools` website](https://antonellilab.github.io/outsider.devtools/).
