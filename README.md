@@ -259,6 +259,6 @@ review
 **An `outsider` module**
 
 Learn more at [outsider
-website](https://ropensci.github.io/outsider/). Want to build your
+website](https://docs.ropensci.org/outsider/). Want to build your
 own module? Check out [`outsider.devtools`
-website](https://ropensci.github.io/outsider.devtools/).
+website](https://docs.ropensci.org/outsider.devtools/).
